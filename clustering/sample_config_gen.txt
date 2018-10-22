@@ -1,0 +1,41 @@
+[shapefile]
+# the path of the shapefile
+fname = /Users/Heather/Documents/MGGG/Massachusetts/FinalMass.shp
+# the unique geoid
+geoid = TOWN_ID
+
+[columns]
+# the district assignment column name in the shapefile
+districtings = CD
+# voting data 
+repvote1 = Pres00R
+demvote1 = Pres00D
+repvote2 = Sen00RL
+demvote2 = Sen00D
+repvote3 = Sen02R
+demvote3 = Sen02D
+repvote4 = Pres04R
+demvote4 = Pres04D
+repvote5 = Sen06R
+demvote5 = Sen06D
+repvote6 = Pres08R
+demvote6 = Pres08D
+repvote7 = Sen08R
+demvote7 = Sen08D
+repvote8 = Sen10R
+demvote8 = Sen10D
+repvote9 = Pres12R
+demvote9 = Pres12D
+repvote10 = Sen12R
+demvote10 = Sen12D
+repvote11 = Sen13R
+demvote11 = Sen13D
+repvote12 = Sen14R
+demvote12 = Sen14D
+repvote13 = Pres16R
+demvote13 = Pres16D
+
+
+# optional to include, uncomment and add column names for relevant demographics
+# e.g. population of black, white, hispanic, etc.
+# [demographics]
