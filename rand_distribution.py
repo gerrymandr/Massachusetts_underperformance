@@ -19,6 +19,7 @@ input_folder = 'Elections/'
 input_name = 'pMassPres16'
 input_end = '.csv'
 output_folder = 'variance_sims/'
+nth_series = '2'
 
 d_index = 3
 r_index = 4
@@ -56,9 +57,9 @@ for i in range(len(total_votes)):
 
 # Create new data sets and save them  
 mean = .3525
-for variance in range(10, 11, 1):
+for variance in range(2, 33, 1):
     var = variance / 1000
-    r_new = truncate_skewed_normal(-8, mean, var, len(file_data), show=True, verbose=True)
+    r_new = truncate_skewed_normal(-8, mean, var, len(file_data), show=False, verbose=True)
     new_data = copy.deepcopy(file_data)
     new_data[0] += ['turnout', 'new_r_share', 'new_d_votes', 'new_r_votes']
     for i in range(0,len(new_data) - 1):
@@ -67,7 +68,7 @@ for variance in range(10, 11, 1):
         new_data[i + 1].append(total_votes[i] * (1 - r_new[i]))
         new_data[i + 1].append(total_votes[i] * r_new[i])
     
-    output_file = output_folder + 'var_' + str(var) + '_from_' + input_name + '.csv'
+    output_file = output_folder + nth_series + '_var_' + str(var) + '_from_' + input_name + '.csv'
     with open(output_file, 'w', newline='') as outfile:
         out = csv.writer(outfile)
         for row in new_data:
