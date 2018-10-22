@@ -4,6 +4,8 @@
 Created on Sun Jul 22 21:09:04 2018
 
 @author: Eug
+
+Make histograms of the R share of the vote in political units
 """
 
 import numpy as np
